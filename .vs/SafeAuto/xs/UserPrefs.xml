@@ -1,11 +1,5 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/app.module.ts">
-    <Files>
-      <File FileName="SafeAuto/ClientApp/src/app/app.component.html" Line="4" Column="12" />
-      <File FileName="SafeAuto/ClientApp/src/index.html" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="9" Column="55" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.component.ts" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -14,7 +8,8 @@
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
                   <Node name="app" expanded="True">
-                    <Node name="app.module.ts" selected="True" />
+                    <Node name="components" expanded="True" />
+                    <Node name="app.component.ts" selected="True" />
                   </Node>
                 </Node>
               </Node>
