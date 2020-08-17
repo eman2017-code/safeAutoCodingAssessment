@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using SafeAuto.Models;
 
 namespace SafeAuto
 {
@@ -20,7 +22,11 @@ namespace SafeAuto
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SafeAutoContext>(opt =>
+               opt.UseInMemoryDatabase("SafeAuto"));
             services.AddControllersWithViews();
+            //services.AddControllers();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
