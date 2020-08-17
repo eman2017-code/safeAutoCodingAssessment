@@ -1,4 +1,38 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.ItemProperties.SafeAuto FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/nav-menu/nav-menu.component.html">
+    <Files>
+      <File FileName="SafeAuto/ClientApp/src/app/home/home.component.html" Line="17" Column="9" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.component.html" Line="4" Column="12" />
+      <File FileName="SafeAuto/ClientApp/src/app/home/home.component.ts" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/index.html" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/nav-menu/nav-menu.component.html" Line="30" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SafeAuto" expanded="True">
+            <Node name="SafeAuto" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="home" expanded="True" />
+                    <Node name="nav-menu" expanded="True">
+                      <Node name="nav-menu.component.html" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SafeAuto PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
