@@ -1,7 +1,6 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
   <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
     <Files>
-      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="13" Column="6" />
       <File FileName="SafeAuto/Controllers/TripController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
