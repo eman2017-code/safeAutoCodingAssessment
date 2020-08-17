@@ -3,8 +3,7 @@ namespace SafeAuto.Models
 {
     public class Person
     {
-        public Person()
-        {
-        }
+        public string DriverName { get; set; }
+
     }
 }
