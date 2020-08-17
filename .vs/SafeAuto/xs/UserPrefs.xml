@@ -1,36 +1,17 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.ts">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
     <Files>
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="4" Column="5" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.css" Line="2" Column="27" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/nav-menu/nav-menu.component.css" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/nav-menu/nav-menu.component.html" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.component.html" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/index.html" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.component.ts" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/nav-menu/nav-menu.component.ts" Line="6" Column="3" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="6" Column="42" />
+      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="13" Column="6" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SafeAuto" expanded="True">
             <Node name="SafeAuto" expanded="True">
-              <Node name="ClientApp" expanded="True">
-                <Node name="src" expanded="True">
-                  <Node name="app" expanded="True">
-                    <Node name="components" expanded="True">
-                      <Node name="home" expanded="True">
-                        <Node name="home.component.ts" selected="True" />
-                      </Node>
-                      <Node name="nav-menu" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="TripController.cs" selected="True" />
               </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
