@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Models/SafeAutoContext.cs">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="1" Column="1" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="16" Column="1" />
+      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="26" Column="9" />
+      <File FileName="SafeAuto/Models/Person.cs" Line="2" Column="1" />
+      <File FileName="SafeAuto/Models/SafeAutoContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SafeAuto" expanded="True">
             <Node name="SafeAuto" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TripController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="SafeAutoContext.cs" selected="True" />
               </Node>
             </Node>
           </Node>
