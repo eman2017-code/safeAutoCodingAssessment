@@ -1,19 +1,27 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
   <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Startup.cs">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" />
-      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" />
-      <File FileName="SafeAuto/Models/Person.cs" />
-      <File FileName="SafeAuto/Models/SafeAutoContext.cs" />
-      <File FileName="SafeAuto/Startup.cs" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.component.ts" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="33" Column="41" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="5" Column="23" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.css" Line="1" Column="8" />
+      <File FileName="SafeAuto/Startup.cs" Line="1" Column="1" />
+      <File FileName="SafeAuto/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SafeAuto" expanded="True">
             <Node name="SafeAuto" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="components" expanded="True">
+                      <Node name="home" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>

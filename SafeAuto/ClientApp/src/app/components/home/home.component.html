@@ -2,23 +2,27 @@
 <p>Emmanuel Miller</p>
 
 <div>
-    <form action="submit">
-        <input type="file" />
-        <button type="submit">Submit</button>
-    </form>
-</div>
+    <div class="submit">
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" />
+        <button type="submit" (click)="file.click()">Upload File</button> 
+    </div>
+    <div>
+        <span *ngIf="progress > 0">{{progress}}%</span>
+        <span *ngIf="message">{{message}}%</span>
+    </div>
 
-<table>
-    <thead>
+    <table>
+        <thead>
+            <tr>
+                <th>Driver-Name</th>
+                <th>Miles</th>
+                <th>MPH</th>
+            </tr>
+        </thead>
         <tr>
-            <th>Driver-Name</th>
-            <th>Miles</th>
-            <th>MPH</th>
+            <td>{{driverName}}</td>
+            <td>{{miles}}</td>
+            <td>{{milesPerHour}}</td>
         </tr>
-    </thead>
-    <tr>
-        <td>{{driverName}}</td>
-        <td>{{miles}}</td>
-        <td>{{milesPerHour}}</td>
-    </tr>
-</table>
+    </table>
+</div>
