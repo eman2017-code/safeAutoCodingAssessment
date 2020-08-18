@@ -14,28 +14,30 @@ export class HomeComponent {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    console.log("connected")
   }
 
-  public uploadFile = files => {
+  public uploadFile = (files) => {
     if (files.length === 0) {
+      console.log("file length is 0");
       return;
-
-      let fileToUpload = <File>files[0];
-      const formData = new FormData();
-      formData.append('file', fileToUpload, fileToUpload.name);
-
-      this.http.post('https://localhost:5001/api/upload', formData, { reportProgress: true, observe: 'events' })
-        .subscribe(event => {
-          // while the upload is in progess
-          if (event.type === HttpEventType.UploadProgress) {
-            this.progress = Math.round(100 * event.loaded / event.total);
-          }
-          // once the upload is finished
-          else if (event.type === HttpEventType.Response) {
-            this.message = 'Upload success.';
-            this.onUploadFinished.emit(event.body);
-          }
-        })
     }
-  }
-}
+
+    let fileToUpload = <File>files[0];
+    const formData = new FormData();
+    formData.append('file', fileToUpload, fileToUpload.name);
+
+    this.http.post('https://localhost:5001/api/trip', formData, { reportProgress: true, observe: 'events' })
+      .subscribe(event => {
+        if (event.type === HttpEventType.UploadProgress) { 
+          console.log("before");
+          this.progress = Math.round(100 * event.loaded / event.total);
+        }
+        else if (event.type === HttpEventType.Response) {
+          console.log("after");
+          this.message = 'Upload success.';
+          this.onUploadFinished.emit(event.body);
+        }
+     })
+   }
+ }

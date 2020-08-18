@@ -3,14 +3,13 @@
 
 <div>
     <div class="submit">
-        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" />
-        <button type="submit" (click)="file.click()">Upload File</button> 
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display: none" />
+        <button type="button" (click)="file.click()">Upload File</button>
     </div>
     <div>
-        <span *ngIf="progress > 0">{{progress}}%</span>
-        <span *ngIf="message">{{message}}%</span>
+        <span class="upload" *ngIf="progress > 0">{{progress}}</span>
+        <span class="upload" *ngIf="message">{{message}}</span>
     </div>
-
     <table>
         <thead>
             <tr>

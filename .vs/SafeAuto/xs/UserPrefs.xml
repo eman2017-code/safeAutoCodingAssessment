@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/app.component.html">
     <Files>
       <File FileName="SafeAuto/ClientApp/src/app/app.component.ts" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="33" Column="41" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="5" Column="23" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.css" Line="1" Column="8" />
-      <File FileName="SafeAuto/Startup.cs" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="5" Column="14" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="12" Column="11" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.css" Line="12" Column="2" />
+      <File FileName="SafeAuto/Startup.cs" Line="70" Column="36" />
       <File FileName="SafeAuto/Program.cs" Line="1" Column="1" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.component.html" Line="4" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,10 +22,12 @@
                     <Node name="components" expanded="True">
                       <Node name="home" expanded="True" />
                     </Node>
+                    <Node name="app.component.html" selected="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
