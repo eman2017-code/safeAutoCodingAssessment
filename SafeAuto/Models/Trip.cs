@@ -9,6 +9,6 @@ namespace SafeAuto.Models
 
         public string EndTime { get; set; }
 
-        public int MilesDriven { get; set; }
+        public double MilesDriven { get; set; }
     }
 }

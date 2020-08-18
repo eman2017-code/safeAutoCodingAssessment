@@ -70,7 +70,17 @@ namespace SafeAuto.Controllers
 
                     foreach (string line in lines)
                     {
-                        Console.WriteLine("\t" + line);
+                        // this is where you will register a driver
+                        if (line.Contains("Driver"))        
+                        {
+                            Console.WriteLine("CONTAINS DRIVER");
+                        }
+
+                        // calculate trip information
+                        if (line.Contains("Trip"))
+                        {
+                            Console.WriteLine("CONTAINS TRIP");
+                        }
                     }
                 }
             }
@@ -80,15 +90,14 @@ namespace SafeAuto.Controllers
             }
         }
 
-        // register Driver
-
-        //// calculate trip
-        //[HttpGet]
-        //public void ListTrips()
-        //{
-        //    // read the file that was submitted
-        //        // if line starts with Driver --> new Person()
-        //        // if line start with Trip --> new Trip()
-        //}
+        public static void CalculateTrip(string driverName, string startTime, string endTime, double milesDriven)
+        {
+            // calculate Trip
+            //driveName = driverName
+            //time = (endTime - startTime) - 12
+            //distance = milesDriven
+            //mph = distance / time
+            //return $"{DriverName}: {distance} @ {mph}"
+        }
     }
 }
