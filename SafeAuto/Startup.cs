@@ -28,7 +28,6 @@ namespace SafeAuto
             services.AddDbContext<SafeAutoContext>(opt =>
                opt.UseInMemoryDatabase("SafeAuto"));
             services.AddControllersWithViews();
-            //services.AddControllers();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -67,7 +66,6 @@ namespace SafeAuto
 
             app.UseHttpsRedirection();
 
-            //app.UseStaticFiles();
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();

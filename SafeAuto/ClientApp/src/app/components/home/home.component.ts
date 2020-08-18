@@ -14,7 +14,6 @@ export class HomeComponent {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log("connected")
   }
 
   public uploadFile = (files) => {
@@ -39,5 +38,9 @@ export class HomeComponent {
           this.onUploadFinished.emit(event.body);
         }
      })
-   }
+  }
+
+  //public readFile = (files) => {
+
+  //}
  }

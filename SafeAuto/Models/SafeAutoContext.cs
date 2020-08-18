@@ -10,6 +10,6 @@ namespace SafeAuto.Models
         {
         }
 
-        public DbSet<Trips> Trips { get; set; }
+        public DbSet<Trip> Trip { get; set; }
     }
 }

@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Resources\TextFiles\" />
+    <Folder Include="Resources\NewlyCreatedFile\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
