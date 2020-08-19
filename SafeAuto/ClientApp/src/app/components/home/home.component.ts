@@ -13,7 +13,7 @@ export class HomeComponent {
   public message: string;
   public progress: number;
   @Output() public onUploadFinished = new EventEmitter();
-  loadedTrips = [];
+  loadedTrips: Trip[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -48,8 +48,8 @@ export class HomeComponent {
 
   private listTrips() {
     //no subscription, no request
-    this.http.get('https://localhost:5001/api/trip')
-      .pipe(map((responseData: { [key: string]: Trip}) => {
+    this.http.get<{[key: string]: Trip}>('https://localhost:5001/api/trip')
+      .pipe(map(responseData => {
         const tripsArray: Trip[] = [];
         for (const key in responseData) {
           if (responseData.hasOwnProperty(key)) {
@@ -59,7 +59,7 @@ export class HomeComponent {
         return tripsArray;
       }))
       .subscribe(trips => {
-        console.log(trips);
+        this.loadedTrips = trips;
     });
   }
  }

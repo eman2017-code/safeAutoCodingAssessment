@@ -18,10 +18,15 @@
                 <th>MPH</th>
             </tr>
         </thead>
-        <tr>
-            <td>{{driverName}}</td>
-            <td>{{miles}}</td>
-            <td>{{milesPerHour}}</td>
+        <tr *ngIf="loadedTrips.length < 1">
+            <td>No Trips Inputted Yet...</td>
+        </tr>
+        <tr *ngIf="loadTrips.length <= 1">
+            <td *ngFor="let trip of loadedTrips">
+                <td>{{trip.driverName}}</td>
+                <td>{{trip.miles}}</td>
+                <td>{{trip.milesPerHour}}</td>
+            </td>
         </tr>
     </table>
 </div>
