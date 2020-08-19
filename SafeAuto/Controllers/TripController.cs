@@ -73,13 +73,14 @@ namespace SafeAuto.Controllers
                         // this is where you will register a driver
                         if (line.Contains("Driver"))        
                         {
+                            // create a new Person and register driver
                             Console.WriteLine("CONTAINS DRIVER");
                         }
 
                         // calculate trip information
                         if (line.Contains("Trip"))
                         {
-                            Console.WriteLine("CONTAINS TRIP");
+                            TripController.CalculateTrip("Emmanuel", "3:10", "10:45", 6);
                         }
                     }
                 }
@@ -92,12 +93,12 @@ namespace SafeAuto.Controllers
 
         public static void CalculateTrip(string driverName, string startTime, string endTime, double milesDriven)
         {
-            // calculate Trip
-            //driveName = driverName
-            //time = (endTime - startTime) - 12
-            //distance = milesDriven
-            //mph = distance / time
-            //return $"{DriverName}: {distance} @ {mph}"
+            // get the time difference between start and end
+            TimeSpan duration = DateTime.Parse(endTime).Subtract(DateTime.Parse(startTime));
+
+            // calculate mph = distance / time
+
+            // create a new trip
         }
     }
 }

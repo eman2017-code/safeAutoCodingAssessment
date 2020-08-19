@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.ts">
     <Files>
       <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="10" Column="64" />
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="87" Column="1" />
+      <File FileName="SafeAuto/Models/Trip.cs" Line="12" Column="22" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="101" Column="33" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="41" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,14 +15,14 @@
                 <Node name="src" expanded="True">
                   <Node name="app" expanded="True">
                     <Node name="components" expanded="True">
-                      <Node name="home" expanded="True" />
+                      <Node name="home" expanded="True">
+                        <Node name="home.component.ts" selected="True" />
+                      </Node>
                     </Node>
                   </Node>
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="TripController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Resources" expanded="True" />
               <Node name="wwwroot" expanded="True" />
@@ -37,13 +39,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="99" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="101" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="86" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="84" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="87" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -39,8 +39,4 @@ export class HomeComponent {
         }
      })
   }
-
-  //public readFile = (files) => {
-
-  //}
  }
