@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.Internal;
 using SafeAuto.Models;
+using System.Linq;
 
 namespace SafeAuto.Controllers
 {
@@ -68,13 +69,23 @@ namespace SafeAuto.Controllers
                     //read each line into a string array
                     string[] lines = System.IO.File.ReadAllLines(file);
 
+                    int found = 0;
+                    string foundDriverName = "";
+
                     foreach (string line in lines)
                     {
+                        // creates a new drive object
+                        var driver = new Driver();
+
                         // this is where you will register a driver
                         if (line.Contains("Driver"))        
                         {
-                            // create a new Person and register driver
-                            Console.WriteLine("CONTAINS DRIVER");
+                            found = line.IndexOf(" ");
+                            foundDriverName = line.Substring(found + 1);
+
+                            driver.DriverName = foundDriverName;
+
+                            Console.WriteLine(driver);
                         }
 
                         // calculate trip information
