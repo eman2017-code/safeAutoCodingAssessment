@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting.Internal;
 using SafeAuto.Models;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SafeAuto.Controllers
 {
@@ -69,29 +70,33 @@ namespace SafeAuto.Controllers
                     //read each line into a string array
                     string[] lines = System.IO.File.ReadAllLines(file);
 
-                    int found = 0;
-                    string foundDriverName = "";
-
                     foreach (string line in lines)
                     {
-                        // creates a new drive object
+                        //creates a new driver object
                         var driver = new Driver();
 
-                        // this is where you will register a driver
+                        //creates a new trip object
+                        var trip = new Trip();
+
+                        char[] separator = { ' ' };
+                        int count = 5;
+                        String[] strlist = line.Split(separator,
+                                       count, StringSplitOptions.None);
+
+                        //this is where you will register a driver
                         if (line.Contains("Driver"))        
                         {
-                            found = line.IndexOf(" ");
-                            foundDriverName = line.Substring(found + 1);
-
-                            driver.DriverName = foundDriverName;
-
-                            Console.WriteLine(driver);
+                            driver.DriverName = strlist[1];
                         }
 
-                        // calculate trip information
                         if (line.Contains("Trip"))
                         {
-                            TripController.CalculateTrip("Emmanuel", "3:10", "10:45", 6);
+                            trip.DriverName = strlist[1];
+                            trip.StartTime = strlist[2];
+                            trip.EndTime = strlist[3];
+                            trip.MilesDriven = strlist[4];
+
+                            TripController.CalculateTrip(trip);
                         }
                     }
                 }
@@ -102,14 +107,15 @@ namespace SafeAuto.Controllers
             }
         }
 
-        public static void CalculateTrip(string driverName, string startTime, string endTime, double milesDriven)
+        //calculate trip information and send to frontend
+        public static void CalculateTrip(Trip trip)
         {
-            // get the time difference between start and end
-            TimeSpan duration = DateTime.Parse(endTime).Subtract(DateTime.Parse(startTime));
+            //get the time difference between start and end
+            TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
 
-            // calculate mph = distance / time
+            //calculate mph = distance / time
 
-            // create a new trip
+            //create a new trip
         }
     }
 }
