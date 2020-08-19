@@ -1,19 +1,25 @@
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Trip } from '../../trip.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
   public message: string;
   public progress: number;
   @Output() public onUploadFinished = new EventEmitter();
+  loadedTrips = [];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    //automatically list trips
+    this.listTrips();
   }
 
   public uploadFile = (files) => {
@@ -38,5 +44,22 @@ export class HomeComponent {
           this.onUploadFinished.emit(event.body);
         }
      })
+  }
+
+  private listTrips() {
+    //no subscription, no request
+    this.http.get('https://localhost:5001/api/trip')
+      .pipe(map((responseData: { [key: string]: Trip}) => {
+        const tripsArray: Trip[] = [];
+        for (const key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            tripsArray.push({ ...responseData[key], id: key })
+          }
+        }
+        return tripsArray;
+      }))
+      .subscribe(trips => {
+        console.log(trips);
+    });
   }
  }

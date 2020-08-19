@@ -16,7 +16,7 @@ namespace SafeAuto.Controllers
     {
         // handles uploading of txt file
         [HttpPost, DisableRequestSizeLimit]
-        public IActionResult Upload(  )
+        public IActionResult Upload()
         {
             try
             {
@@ -70,35 +70,36 @@ namespace SafeAuto.Controllers
                     //read each line into a string array
                     string[] lines = System.IO.File.ReadAllLines(file);
 
+                    //creates a new driver object
+                    var driver = new Driver();
+
+                    //creates a new trip object
+                    var trip = new Trip();
+
                     foreach (string line in lines)
                     {
-                        //creates a new driver object
-                        var driver = new Driver();
-
-                        //creates a new trip object
-                        var trip = new Trip();
-
                         char[] separator = { ' ' };
                         int count = 5;
                         String[] strlist = line.Split(separator,
                                        count, StringSplitOptions.None);
 
-                        //this is where you will register a driver
+                        //register a Driver
                         if (line.Contains("Driver"))        
                         {
                             driver.DriverName = strlist[1];
                         }
 
+                        //populate Trip
                         if (line.Contains("Trip"))
                         {
                             trip.DriverName = strlist[1];
                             trip.StartTime = strlist[2];
                             trip.EndTime = strlist[3];
                             trip.MilesDriven = strlist[4];
-
-                            TripController.CalculateTrip(trip);
                         }
                     }
+
+                    //CalculateTrip(trip);
                 }
             }
             catch (Exception ex)
@@ -107,15 +108,41 @@ namespace SafeAuto.Controllers
             }
         }
 
-        //calculate trip information and send to frontend
-        public static void CalculateTrip(Trip trip)
-        {
-            //get the time difference between start and end
-            TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
+        //[HttpGet]
+        //public IActionResult CalculateTrip(Trip trip) Get()
+        //{
+        //    try
+        //    {
+        //        //get time difference
+        //        TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
+        //        return duration;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusCode(500, $"Interal Server Error: {ex}.");
+        //    }
+        //}
 
-            //calculate mph = distance / time
+        ////calculate trip information and send to frontend
+        //public static string CalculateTrip(Trip trip)
+        //{
+        //    try
+        //    {
+        //        ////get the time difference between start and end
+        //        //TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
+        //        //double milesDrivenToInt = Convert.ToInt32(trip.MilesDriven);
 
-            //create a new trip
-        }
+        //        ////calculate mph = distance / duration
+        //        //var mph = milesDrivenToInt / duration;
+
+        //        //Console.WriteLine(mph);
+
+        //        //return $"{trip.DriverName}: {trip.MilesDriven} @ {mph}";
+        //    }
+        //    catch (Exception ex)
+        //    {
+               
+        //    }
+        //}
     }
 }

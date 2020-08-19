@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/trip.model.ts">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="108" Column="59" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="125" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="51" Column="17" />
       <File FileName="SafeAuto/Models/Trip.cs" Line="12" Column="22" />
+      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="27" Column="45" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/trip.model.ts" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SafeAuto" expanded="True">
             <Node name="SafeAuto" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TripController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,14 +25,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="29" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="31" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="35" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="36" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="103" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="102" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
