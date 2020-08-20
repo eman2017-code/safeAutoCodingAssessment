@@ -43,14 +43,11 @@ namespace SafeAuto.Controllers
 
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
-
                         file.CopyTo(stream);
                         stream.Close();
                     }
 
-                    TripController.ReadFiles(fullPath);
-
-                    return Ok(new { dbPath });
+                    return RedirectToAction("ListTrips", new { file = fullPath });
                 }
                 else
                 {
@@ -63,8 +60,14 @@ namespace SafeAuto.Controllers
             }
         }
 
-        public static void ReadFiles(string file)
+        //GET api/trips/listTrips
+        //list all trips that are in the input file
+        [HttpGet("listTrips")]
+        public ActionResult ListTrips(string file)
         {
+            //create list of trips
+            var listOfTrips = new List<Trip> { };
+
             try
             {
                 using (var sr = new StreamReader(file))
@@ -98,45 +101,18 @@ namespace SafeAuto.Controllers
                             trip.StartTime = strlist[2];
                             trip.EndTime = strlist[3];
                             trip.MilesDriven = strlist[4];
+
+                            listOfTrips.Add(trip);
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Internal Server Error: {ex}.");
-            }
-        }
 
-        //GET api/trips/listTrips
-        //list all trips that are in the input file
-        [HttpGet("listTrips")]
-        public ActionResult ListTrips(Trip trip)
-        {
-            try
-            {
-                var trips = new List<Trip>();
-                return Ok(trip);
+                return Ok();
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal Server Error: {ex}");
             }
         }
-
-        //[HttpGet]
-        //public IActionResult CalculateTrip(Trip trip) Get()
-        //{
-        //    try
-        //    {
-        //        //get time difference
-        //        TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
-        //        return duration;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        StatusCode(500, $"Interal Server Error: {ex}.");
-        //    }
-        //}
     }
 }

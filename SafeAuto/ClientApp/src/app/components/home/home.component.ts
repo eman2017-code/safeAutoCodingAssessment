@@ -18,7 +18,7 @@ export class HomeComponent {
 
   ngOnInit() {
     //automatically list trips
-    //this.listTrips();
+    this.listTrips();
   }
 
   public uploadFile = (files) => {
@@ -54,17 +54,21 @@ export class HomeComponent {
       .get<{ [key: string]: Trip }>("https://localhost:5001/api/trip/listTrips")
       .pipe(
         map((responseData) => {
+          console.log("responseData", responseData);
           const tripsArray: Trip[] = [];
           for (const key in responseData) {
             if (responseData.hasOwnProperty(key)) {
               tripsArray.push({ ...responseData[key] });
             }
           }
+          console.log("tripsArray", tripsArray);
           return tripsArray;
         })
       )
       .subscribe((trips) => {
         this.loadedTrips = trips;
       });
+
+    console.log("this.loadedTrips", this.loadedTrips);
   }
 }
