@@ -2,29 +2,35 @@
 <p>Emmanuel Miller</p>
 
 <div>
-    <div class="submit">
-        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display: none" />
-        <button type="button" (click)="file.click()">Upload File</button>
-    </div>
-    <div>
-        <span class="upload" *ngIf="progress > 0">{{progress}} %</span>
-        <span class="upload" *ngIf="message">{{message}}</span>
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Driver-Name</th>
-                <th>Miles</th>
-                <th>MPH</th>
-            </tr>
-        </thead>
-        <tr *ngIf="loadedTrips.length < 1">
-            <td>No Trips Inputted Yet...</td>
-        </tr>
-        <tr *ngIf="loadTrips.length <= 1">
-            <td *ngFor="let trip of loadedTrips">{{trip.driverName}}</td>
-            <td>{{trip.miles}}</td>
-            <td>{{trip.milesPerHour}}</td>
-        </tr>
-    </table>
+  <div class="submit">
+    <input
+      type="file"
+      #file
+      placeholder="Choose file"
+      (change)="uploadFile(file.files)"
+      style="display: none;"
+    />
+    <button type="button" (click)="file.click()">Upload File</button>
+  </div>
+  <div>
+    <span class="upload" *ngIf="progress > 0">{{ progress }} %</span>
+    <span class="upload" *ngIf="message">{{ message }}</span>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Driver-Name</th>
+        <th>Miles</th>
+        <th>MPH</th>
+      </tr>
+    </thead>
+    <tr *ngIf="loadedTrips.length < 1">
+      <td>No Trips Inputted Yet...</td>
+    </tr>
+    <tr *ngIf="loadTrips.length <= 1">
+      <td *ngFor="let trip of loadedTrips">{{ trip.driverName }}</td>
+      <td>{{ trip.miles }}</td>
+      <td>{{ trip.milesPerHour }}</td>
+    </tr>
+  </table>
 </div>
