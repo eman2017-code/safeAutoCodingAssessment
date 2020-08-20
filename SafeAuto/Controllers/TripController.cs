@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting.Internal;
 using SafeAuto.Models;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace SafeAuto.Controllers
 {
@@ -14,6 +15,7 @@ namespace SafeAuto.Controllers
     [ApiController]
     public class TripController : Controller
     {
+        //POST /api/trips/upload
         // handles uploading of txt file
         [HttpPost, DisableRequestSizeLimit]
         public IActionResult Upload()
@@ -98,13 +100,27 @@ namespace SafeAuto.Controllers
                             trip.MilesDriven = strlist[4];
                         }
                     }
-
-                    //CalculateTrip(trip);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Internal Server Error: {ex}.");
+            }
+        }
+
+        //GET api/trips/listTrips
+        //list all trips that are in the input file
+        [HttpGet("listTrips")]
+        public ActionResult ListTrips(Trip trip)
+        {
+            try
+            {
+                var trips = new List<Trip>();
+                return Ok(trip);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex}");
             }
         }
 
@@ -120,28 +136,6 @@ namespace SafeAuto.Controllers
         //    catch (Exception ex)
         //    {
         //        StatusCode(500, $"Interal Server Error: {ex}.");
-        //    }
-        //}
-
-        ////calculate trip information and send to frontend
-        //public static string CalculateTrip(Trip trip)
-        //{
-        //    try
-        //    {
-        //        ////get the time difference between start and end
-        //        //TimeSpan duration = DateTime.Parse(trip.EndTime).Subtract(DateTime.Parse(trip.StartTime));
-        //        //double milesDrivenToInt = Convert.ToInt32(trip.MilesDriven);
-
-        //        ////calculate mph = distance / duration
-        //        //var mph = milesDrivenToInt / duration;
-
-        //        //Console.WriteLine(mph);
-
-        //        //return $"{trip.DriverName}: {trip.MilesDriven} @ {mph}";
-        //    }
-        //    catch (Exception ex)
-        //    {
-               
         //    }
         //}
     }

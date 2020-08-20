@@ -19,7 +19,7 @@ export class HomeComponent {
 
   ngOnInit() {
     //automatically list trips
-    this.listTrips();
+    //this.listTrips();
   }
 
   public uploadFile = (files) => {
@@ -46,20 +46,26 @@ export class HomeComponent {
      })
   }
 
-  private listTrips() {
-    //no subscription, no request
-    this.http.get<{[key: string]: Trip}>('https://localhost:5001/api/trip')
-      .pipe(map(responseData => {
-        const tripsArray: Trip[] = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            tripsArray.push({ ...responseData[key], id: key })
-          }
-        }
-        return tripsArray;
-      }))
-      .subscribe(trips => {
-        this.loadedTrips = trips;
-    });
-  }
+  //private listTrips() {
+  //  //no subscription, no request
+  //  this.http.get<{[key: string]: Trip}>('https://localhost:5001/api/trip')
+  //    .pipe(map(responseData => {
+  //      const tripsArray: Trip[] = [];
+  //      for (const key in responseData) {
+  //        if (responseData.hasOwnProperty(key)) {
+  //          tripsArray.push({ ...responseData[key], id: key })
+  //        }
+
+  //        console.log("responseData", responseData);
+
+  //      }
+
+  //      console.log("tripsArray", tripsArray);
+
+  //      return tripsArray;
+  //    }))
+  //    .subscribe(trips => {
+  //      this.loadedTrips = trips;
+  //  });
+  //}
  }

@@ -1,31 +1,22 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="125" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="62" Column="34" />
-      <File FileName="SafeAuto/Models/Trip.cs" Line="12" Column="22" />
-      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="27" Column="45" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/trip.model.ts" Line="1" Column="22" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="1" Column="1" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="121" Column="43" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" />
+      <File FileName="SafeAuto/Models/Trip.cs" />
+      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" />
+      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.css" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SafeAuto" expanded="True">
             <Node name="SafeAuto" expanded="True">
-              <Node name="ClientApp" expanded="True">
-                <Node name="src" expanded="True">
-                  <Node name="app" expanded="True">
-                    <Node name="components" expanded="True">
-                      <Node name="home" expanded="True">
-                        <Node name="home.component.html" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="TripController.cs" selected="True" />
               </Node>
-              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
           </Node>
