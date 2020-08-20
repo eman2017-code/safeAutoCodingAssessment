@@ -48,12 +48,12 @@ export class HomeComponent {
 
   private listTrips() {
     //no subscription, no request
-    this.http.get<{[key: string]: Trip}>('https://localhost:5001/api/trip')
+    this.http.get<{[key: string]: Trip}>('https://localhost:5001/api/trip/listTrips')
       .pipe(map(responseData => {
         const tripsArray: Trip[] = [];
         for (const key in responseData) {
           if (responseData.hasOwnProperty(key)) {
-            tripsArray.push({ ...responseData[key], id: key })
+            tripsArray.push({ ...responseData[key] })
           }
         }
         return tripsArray;

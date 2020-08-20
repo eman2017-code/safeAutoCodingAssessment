@@ -1,13 +1,11 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
   <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.html">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="125" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="62" Column="34" />
-      <File FileName="SafeAuto/Models/Trip.cs" Line="12" Column="22" />
-      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" Line="27" Column="45" />
-      <File FileName="SafeAuto/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
-      <File FileName="SafeAuto/ClientApp/src/app/trip.model.ts" Line="1" Column="22" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="1" Column="1" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="111" Column="1" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="56" Column="51" />
+      <File FileName="SafeAuto/Models/Trip.cs" />
+      <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="20" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +17,7 @@
                   <Node name="app" expanded="True">
                     <Node name="components" expanded="True">
                       <Node name="home" expanded="True">
-                        <Node name="home.component.html" selected="True" />
+                        <Node name="home.component.ts" selected="True" />
                       </Node>
                     </Node>
                   </Node>
