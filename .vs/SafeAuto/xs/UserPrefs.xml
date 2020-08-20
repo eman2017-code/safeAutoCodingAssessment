@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
   <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/Controllers/TripController.cs">
     <Files>
-      <File FileName="SafeAuto/Controllers/TripController.cs" Line="80" Column="41" />
+      <File FileName="SafeAuto/Controllers/TripController.cs" Line="125" Column="1" />
       <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" />
       <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" />
       <File FileName="SafeAuto/Controllers/WeatherForecastController.cs" />
@@ -35,13 +35,6 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="54" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="55" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="56" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="57" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/ClientApp/src/app/components/home/home.component.ts" relfile="SafeAuto/ClientApp/src/app/components/home/home.component.ts" line="58" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="127" column="1" />
-      <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="129" column="1" />
       <Breakpoint file="/Users/emmanuelmiller/tests_and_examples/codingAssessments/SafeAuto/SafeAuto/Controllers/TripController.cs" relfile="SafeAuto/Controllers/TripController.cs" line="125" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

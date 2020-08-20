@@ -70,48 +70,49 @@ namespace SafeAuto.Controllers
             }
         }
 
-        //GET api/trips/listTrips
+        //GET api/trip/listTrips
         //list all trips that are in the input file
         [HttpGet("listTrips")]
         public List<Trip> ListTrips(string file)
         {
-            if (file == null)
-            {
-                return new List<Trip>();
-            }
-
-            //create list of trips
-            var listOfTrips = new List<Trip> { };
-
             try
             {
                 using (var sr = new StreamReader(file))
                 {
+                    if (file == null)
+                    {
+                        return new List<Trip>();
+                    }
+
                     //read each line into a string array
                     string[] lines = System.IO.File.ReadAllLines(file);
 
-                    //creates a new driver object
-                    var driver = new Driver();
+                    //create list of trips
+                    var listOfTrips = new List<Trip>();
 
-                    //creates a new trip object
-                    var trip = new Trip();
 
-                    foreach (string line in lines)
+                    for (int i = 0; i < lines.Length; i++)
                     {
                         char[] separator = { ' ' };
                         int count = 5;
-                        String[] strlist = line.Split(separator,
+                        String[] strlist = lines[i].Split(separator,
                                        count, StringSplitOptions.None);
 
                         //register a Driver
-                        if (line.Contains("Driver"))
+                        if (lines[i].Contains("Driver"))
                         {
+                            //creates a new driver object
+                            var driver = new Driver();
+
                             driver.DriverName = strlist[1];
                         }
 
                         //populate Trip
-                        if (line.Contains("Trip"))
+                        if (lines[i].Contains("Trip"))
                         {
+                            //creates a new trip object
+                            var trip = new Trip();
+
                             trip.DriverName = strlist[1];
                             trip.StartTime = strlist[2];
                             trip.EndTime = strlist[3];
@@ -120,14 +121,13 @@ namespace SafeAuto.Controllers
                             listOfTrips.Add(trip);
                         }
                     }
-                }
 
-                return listOfTrips;
+                    return listOfTrips;
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                //return StatusCode(500, $"Internal Server Error: {ex}");
+                Console.WriteLine($"Internal Server Error: {ex.Message}");
                 return new List<Trip>();
             }
         }
