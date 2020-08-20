@@ -73,11 +73,11 @@ namespace SafeAuto.Controllers
         //GET api/trips/listTrips
         //list all trips that are in the input file
         [HttpGet("listTrips")]
-        public IActionResult ListTrips(string file)
+        public List<Trip> ListTrips(string file)
         {
             if (file == null)
             {
-                return Ok();
+                return new List<Trip>();
             }
 
             //create list of trips
@@ -122,11 +122,13 @@ namespace SafeAuto.Controllers
                     }
                 }
 
-                return Json(listOfTrips);
+                return listOfTrips;
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Internal Server Error: {ex}");
+                Console.WriteLine(ex.Message);
+                //return StatusCode(500, $"Internal Server Error: {ex}");
+                return new List<Trip>();
             }
         }
     }

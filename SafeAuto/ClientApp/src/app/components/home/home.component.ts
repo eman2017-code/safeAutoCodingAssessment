@@ -8,13 +8,14 @@ import { Trip } from "../../trip.model";
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"],
 })
+
 export class HomeComponent {
   public message: string;
   public progress: number;
   @Output() public onUploadFinished = new EventEmitter();
   loadedTrips: Trip[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     //automatically list trips
@@ -51,24 +52,8 @@ export class HomeComponent {
   };
 
   private listTrips() {
-    this.http.get<{ [key: string]: Trip }>("https://localhost:5001/api/trip/listTrips")
-      .pipe(
-        map((responseData) => {
-          console.log("responseData", responseData);
-          const tripsArray: Trip[] = [];
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              tripsArray.push({ ...responseData[key] });
-            }
-          }
-          console.log("tripsArray", tripsArray);
-          return tripsArray;
-        })
-      )
-      .subscribe((trips) => {
-        this.loadedTrips = trips;
-      });
-
-    console.log("this.loadedTrips", this.loadedTrips);
+    this.http.get("https://localhost:5001/api/trip/listTrips").subscribe(trips => {
+      console.log("trips", trips);
+    });
   }
 }
