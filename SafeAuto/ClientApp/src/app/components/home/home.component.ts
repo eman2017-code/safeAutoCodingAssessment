@@ -46,12 +46,12 @@ export class HomeComponent {
           this.onUploadFinished.emit(event.body);
         }
       });
+
+    this.listTrips();
   };
 
   private listTrips() {
-    //no subscription, no request
-    this.http
-      .get<{ [key: string]: Trip }>("https://localhost:5001/api/trip/listTrips")
+    this.http.get<{ [key: string]: Trip }>("https://localhost:5001/api/trip/listTrips")
       .pipe(
         map((responseData) => {
           console.log("responseData", responseData);

@@ -47,7 +47,17 @@ namespace SafeAuto.Controllers
                         stream.Close();
                     }
 
-                    return RedirectToAction("ListTrips", new { file = fullPath });
+                    //ensures that no null value will be passed into ListTrip()
+                    if (fullPath == "")
+                    {
+                        //no need to continue on from here
+                        //user has not inputted a file yet
+                        return Ok();
+                    }
+                    else
+                    {
+                        return RedirectToAction("ListTrips", new { file = fullPath });
+                    }
                 }
                 else
                 {
@@ -63,8 +73,13 @@ namespace SafeAuto.Controllers
         //GET api/trips/listTrips
         //list all trips that are in the input file
         [HttpGet("listTrips")]
-        public ActionResult ListTrips(string file)
+        public IActionResult ListTrips(string file)
         {
+            if (file == null)
+            {
+                return Ok();
+            }
+
             //create list of trips
             var listOfTrips = new List<Trip> { };
 
@@ -107,7 +122,7 @@ namespace SafeAuto.Controllers
                     }
                 }
 
-                return Ok();
+                return Json(listOfTrips);
             }
             catch (Exception ex)
             {
