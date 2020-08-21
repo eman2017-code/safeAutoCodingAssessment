@@ -72,24 +72,23 @@ namespace SafeAuto.Controllers
 
         //GET api/trip/listTrips
         //list all trips that are in the input file
-        [HttpGet("listTrips")]
+        [HttpGet("listTrips/{file}")]
         public List<Trip> ListTrips(string file)
         {
+            if (file == null)
+            {
+                return new List<Trip>();
+            }
+
             try
             {
                 using (var sr = new StreamReader(file))
                 {
-                    if (file == null)
-                    {
-                        return new List<Trip>();
-                    }
-
                     //read each line into a string array
                     string[] lines = System.IO.File.ReadAllLines(file);
 
                     //create list of trips
                     var listOfTrips = new List<Trip>();
-
 
                     for (int i = 0; i < lines.Length; i++)
                     {

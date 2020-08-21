@@ -18,7 +18,10 @@ export class HomeComponent {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    //automatically list trips
+    this.onFetchTrips();
+  }
+
+  onFetchTrips() {
     this.listTrips();
   }
 
@@ -39,10 +42,8 @@ export class HomeComponent {
       })
       .subscribe((event) => {
         if (event.type === HttpEventType.UploadProgress) {
-          console.log("before");
           this.progress = Math.round((100 * event.loaded) / event.total);
         } else if (event.type === HttpEventType.Response) {
-          console.log("after");
           this.message = "Upload success.";
           this.onUploadFinished.emit(event.body);
         }
@@ -52,8 +53,26 @@ export class HomeComponent {
   };
 
   private listTrips() {
-    this.http.get("https://localhost:5001/api/trip/listTrips").subscribe(trips => {
-      console.log("trips", trips);
-    });
+    //this.http.get("https://localhost:5001/api/trip/listTrips")
+    //  .pipe(map(responseData => {
+    //    console.log("responseData", responseData);
+    //    const tripsArray = [];
+    //    for (const key in responseData) {
+    //      if (responseData.hasOwnProperty(key)) {
+    //        tripsArray.push({ ...responseData[key]})
+    //      }
+    //    }
+    //    //convert objects in array of objects
+
+    //    return tripsArray;
+    //  }))
+    //  .subscribe(trips => {
+    //    this.loadedTrips = trips;
+    //});
+
+    const request = this.http.get("https://localhost:5001/api/trip/listTrips/");
+    console.log("request", request);
+
+    request.subscribe(response => { console.log("response", response) });
   }
 }
