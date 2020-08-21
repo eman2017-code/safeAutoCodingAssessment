@@ -13,12 +13,11 @@ export class HomeComponent {
   public message: string;
   public progress: number;
   @Output() public onUploadFinished = new EventEmitter();
-  loadedTrips: Trip[] = [];
+  loadedTrips = [];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.onFetchTrips();
   }
 
   onFetchTrips() {
@@ -48,21 +47,15 @@ export class HomeComponent {
           this.onUploadFinished.emit(event.body);
         }
       });
+
+      this.onFetchTrips();
   };
 
   private listTrips() {
     this.http.get("https://localhost:5001/api/trip")
-      .pipe(map(responseData => {
-        const tripsArray = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            tripsArray.push({ ...responseData[key]})
-          }
-        }
-        return tripsArray;
-      }))
-      .subscribe(trips => {
-        this.loadedTrips = trips;
+      .subscribe(listOfTrips => {
+        console.log("listOfTrips", listOfTrips);
+        this.loadedTrips.push(listOfTrips);
       });
   }
 }

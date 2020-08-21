@@ -29,7 +29,7 @@
         </tr>
         <tr *ngIf="loadedTrips.length >= 1">
             <td *ngFor="let trip of loadedTrips">{{ trip.driverName }}</td>
-            <td>{{ trip.miles }}</td>
+            <td>{{ trip.milesDriven }}</td>
             <td>{{ trip.milesPerHour }}</td>
         </tr>
     </table>
