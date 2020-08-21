@@ -52,11 +52,11 @@ namespace SafeAuto.Controllers
                     {
                         //no need to continue on from here
                         //user has not inputted a file yet
-                        return Ok();
+                        return BadRequest(405);
                     }
                     else
                     {
-                        return RedirectToAction("ListTrips", new { file = fullPath });
+                        return Ok(ListTrips(fullPath));
                     }
                 }
                 else
@@ -66,13 +66,13 @@ namespace SafeAuto.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Internal Server Error: {ex}");
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }
 
-        //GET api/trip/listTrips
+        //GET api/trip
         //list all trips that are in the input file
-        [HttpGet("listTrips/{file}")]
+        [HttpGet]
         public List<Trip> ListTrips(string file)
         {
             if (file == null)

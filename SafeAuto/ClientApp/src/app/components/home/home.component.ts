@@ -48,31 +48,21 @@ export class HomeComponent {
           this.onUploadFinished.emit(event.body);
         }
       });
-
-    this.listTrips();
   };
 
   private listTrips() {
-    //this.http.get("https://localhost:5001/api/trip/listTrips")
-    //  .pipe(map(responseData => {
-    //    console.log("responseData", responseData);
-    //    const tripsArray = [];
-    //    for (const key in responseData) {
-    //      if (responseData.hasOwnProperty(key)) {
-    //        tripsArray.push({ ...responseData[key]})
-    //      }
-    //    }
-    //    //convert objects in array of objects
-
-    //    return tripsArray;
-    //  }))
-    //  .subscribe(trips => {
-    //    this.loadedTrips = trips;
-    //});
-
-    const request = this.http.get("https://localhost:5001/api/trip/listTrips/");
-    console.log("request", request);
-
-    request.subscribe(response => { console.log("response", response) });
+    this.http.get("https://localhost:5001/api/trip")
+      .pipe(map(responseData => {
+        const tripsArray = [];
+        for (const key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            tripsArray.push({ ...responseData[key]})
+          }
+        }
+        return tripsArray;
+      }))
+      .subscribe(trips => {
+        this.loadedTrips = trips;
+      });
   }
 }
