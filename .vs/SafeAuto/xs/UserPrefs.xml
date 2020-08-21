@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{FD2CB0CB-E9C9-4B4B-A8FE-8E22DE09DA50}|SafeAuto">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.ts">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SafeAuto/ClientApp/src/app/components/home/home.component.html">
     <Files>
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="16" Column="14" />
-      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.ts" Line="58" Column="43" />
+      <File FileName="SafeAuto/ClientApp/src/app/components/home/home.component.html" Line="33" Column="13" />
       <File FileName="SafeAuto/Controllers/TripController.cs" />
     </Files>
     <Pads>
